@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Biotech Dashboard</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <img src="https://assets-global.website-files.com/627411ee4c66a884d9218208/627411ee4c66a8664d21820c_ark-logo.svg" loading="eager" alt="">
+        </div>
+    </nav>
+    <h1>Data Visualization Dashboard</h1>
+    <div class="container">
+        <div class="chart-container">
+            <div id="line-chart">
+                {{ temp | safe }} <!-- Plotly line chart for temperature -->
+            </div>
+            <div id="line-chart">
+                {{ pH | safe }} <!-- Plotly line chart for pH -->
+            </div>
+            <div id="line-chart">
+                {{ DO | safe }} <!-- Plotly line chart for dissolved oxygen -->
+            </div>
+            <div id="line-chart">
+                {{ pres | safe }} <!-- Plotly line chart for pressure -->
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Ark Biotech &copy; 2023. All rights reserved.</p>
+    </footer>
+</body>
+</html>
